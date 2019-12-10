@@ -1,0 +1,13 @@
+{
+  "name": "awesome-utils",
+  "version": "1.0.0",
+  "description": "tools for front-end development ",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/Inception-entry/utils.git",
+    "type": "git"
+  },
+  "bugs": "https://github.com/Inception-entry/utils/issues",
+  "author": "Inception-entry<batman_gotham@126.com>",
+  "license": "MIT"
+}
