@@ -1,8 +1,8 @@
 /*
  * @Author: batman
  * @Date: 2019-12-14 01:17:18
- * @LastEditors: batman
- * @LastEditTime: 2019-12-14 01:49:39
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-12-16 13:48:28
  * @Description: 一些常用工具函数
  */
 const slugify = require('slugify');
@@ -52,3 +52,4 @@ exports.wait = function(ms = 0) {
     setTimeout(resolve, ms);
   });
 };
+
