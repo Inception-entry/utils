@@ -1,4 +1,12 @@
-const formatPhone = (mobile) => {
+
+/*
+ * @Author: batman
+ * @Date: 2019-12-21 06:40:50
+ * @LastEditors  : batman
+ * @LastEditTime : 2019-12-21 22:58:24
+ * @Description: 格式化手机号的工具函数
+ */
+const formatMobile = (mobile) => {
   let phone = ''
   if (typeof mobile !== 'string') {
     phone = String(mobile)
@@ -11,6 +19,7 @@ const formatPhone = (mobile) => {
     throw new Error('输入的不是手机号')
   }
 }
+
 export {
-  formatPhone
+  formatMobile
 }

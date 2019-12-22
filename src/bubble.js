@@ -1,4 +1,18 @@
 
+/*
+ * @Author: batman
+ * @Date: 2019-12-21 06:40:50
+ * @LastEditors  : batman
+ * @LastEditTime : 2019-12-21 22:53:16
+ * @Description: 
+ */
+
+/**
+ * @name: 
+ * @usage: 
+ * @param {type} 
+ * @return: 
+ */
 const stopBubble = (e) => {
   // 如果提供了事件对象，则这是一个非IE浏览器
   if (e && e.stopPropagation) {
