@@ -9,5 +9,8 @@
   },
   "bugs": "https://github.com/Inception-entry/utils/issues",
   "author": "Inception-entry<batman_gotham@126.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
 }
