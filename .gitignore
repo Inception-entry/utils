@@ -105,3 +105,14 @@ dist
 
 # vsCode setting file
 .vscode/
+
+# editorconfig configuration file
+.editorconfig
+
+# eslint configuration file
+.eslintignore
+.eslintrc.js
+
+# prettier configuration file
+.prettierignore
+.prettierrc.js
