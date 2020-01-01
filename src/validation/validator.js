@@ -2,7 +2,7 @@
  * @Author: batman
  * @Date: 2019-12-21 23:00:33
  * @LastEditors  : batman
- * @LastEditTime : 2019-12-22 22:45:18
+ * @LastEditTime : 2020-01-01 21:42:34
  * @Description: 表单合法性校验,多数用于WAP，h5, app 等移动端的开发，（用ES6语法重新编写过）
  */
 Function.prototype.before = function(beforefn) {
@@ -67,11 +67,7 @@ class Validator {
 					if (strategies[strategy]) {
 						return strategies[strategy].apply(dom, strategyAry);
 					} else {
-						console.error(
-							'请在 validator.js 中新增 ' +
-								strategy +
-								' 校验规则',
-						);
+						console.error('请在 validator.js 中新增 ' + strategy + ' 校验规则');
 					}
 				});
 			})();
@@ -86,6 +82,8 @@ class Validator {
 		}
 	}
 }
+
+export default Validator;
 
 /*  调用示例 */
 /* var registerForm = document.getElementById('registerForm');
