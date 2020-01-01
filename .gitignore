@@ -104,15 +104,15 @@ dist
 .tern-port
 
 # vsCode setting file
-.vscode/
+# .vscode/
 
 # editorconfig configuration file
-.editorconfig
+# .editorconfig
 
 # eslint configuration file
-.eslintignore
-.eslintrc.js
+# .eslintignore
+# .eslintrc.js
 
 # prettier configuration file
-.prettierignore
-.prettierrc.js
+# .prettierignore
+# .prettierrc.js
