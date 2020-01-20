@@ -1,12 +1,12 @@
 /*
  * @Author: batman
  * @Date: 2020-01-14 11:21:52
- * @LastEditors  : batman
- * @LastEditTime : 2020-01-20 09:53:43
+ * @LastEditors  : shengkesi
+ * @LastEditTime : 2020-01-20 13:54:39
  * @Description: 返回一个新的自由数组副本(时间复杂度O(n²))
  */
-import createSet from './createSet.js';
-import setToArray from './setToArray.js';
+import createSet from './createSet';
+import setToArray from './setToArray';
 /** 用于数组优化的最大阈值 */
 const LARGE_ARRAY_SIZE = 200;
 
@@ -59,29 +59,4 @@ const baseUniq = (array, iteratee, comparator) => {
 	console.timeEnd('共花费了');
 	return result; // 循环完成，返回去重后的数组
 };
-
-console.log(
-	baseUniq([
-		{
-			uuid: null,
-			title: '制酒主原料',
-			content: '糯红高粱、小麦、水',
-		},
-		{
-			uuid: null,
-			title: '原料产区',
-			content: '糯红高粱:贵州\n小麦:河南',
-		},
-		{
-			uuid: null,
-			title: '基酒生产',
-			content: '贵州国台酒业股份有限公司',
-		},
-		{
-			uuid: null,
-			title: '制酒主原料',
-			content: '糯红高粱、小麦、水',
-		},
-	]),
-);
-// module.exports = baseUniq;
+export default baseUniq;

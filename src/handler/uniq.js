@@ -16,4 +16,4 @@ const uniq = (array) => {
 	return array && array.length ? baseUniq(array) : [];
 };
 
-module.exports = uniq;
+export default uniq;

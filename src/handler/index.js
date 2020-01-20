@@ -2,8 +2,8 @@ import uniq from './uniq';
 import uniqWith from './uniqWith';
 import uniqBy from './uniqBy';
 
-module.exports = {
+export {
 	uniq,
 	uniqWith,
-	uniqBy,
-};
+	uniqBy
+}
