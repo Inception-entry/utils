@@ -1,0 +1,87 @@
+/*
+ * @Author: batman
+ * @Date: 2020-01-14 11:21:52
+ * @LastEditors  : batman
+ * @LastEditTime : 2020-01-20 09:53:43
+ * @Description: 返回一个新的自由数组副本(时间复杂度O(n²))
+ */
+import createSet from './createSet.js';
+import setToArray from './setToArray.js';
+/** 用于数组优化的最大阈值 */
+const LARGE_ARRAY_SIZE = 200;
+
+/**
+ * @private
+ * @param {Array} array 待处理的数组
+ * @param {Function} [iteratee] 迭代器（递归）执行每个元素
+ * @param {Function} [comparator] 比较器
+ * @returns {Array} 返回一个新的自由数组副本
+ * @usage 当前只能应用无迭代器，无比较器的情况
+ */
+const baseUniq = (array, iteratee, comparator) => {
+	console.time('共花费了');
+	let index = -1;
+	let isCommon = true; // 初始化为普通函数
+	const { length } = array;
+	const result = []; // 对于复合类型的变量，变量名不指向数据，而是指向数据所在的地址，const命令只是保证指向的地址不变，并不保证该地址的数据不变，所以将对象声明为常量必须非常小心。
+	let seen = result; // seen 指向result，节省了存储空间，空间复杂度不变
+
+	/** 针对于多种情况的前置判断 start */
+	// 判断是否有迭代器，没有则设为Set类型（支持Set类型的环境直接调用生成Set实例去重）
+	const set = iteratee ? null : createSet(array);
+	if (set) {
+		return setToArray(set); //Set类型转数组（Set类型中不存在重复元素，相当于去重了）直接返回
+	}
+	/** 针对于多种情况的前置判断 end */
+
+	outer: while (++index < length) {
+		// 循环遍历每一个元素
+		let value = array[index]; // 取出当前遍历值
+		const computed = iteratee ? iteratee(value) : value;
+		value = comparator || value !== 0 ? value : 0;
+		if (isCommon && computed === computed) {
+			// 普通模式执行下面代码
+			let seenIndex = seen.length; // 取当前容器的长度为下一个元素的索引值
+			while (seenIndex--) {
+				// 循环seen（拷贝数组）-> 从后往前 和 result（原数组）-> 从前往后，比较
+				if (seen[seenIndex] === computed) {
+					// 匹配到重复的元素
+					continue outer; // 直接跳出当前循环直接进入下一轮outer:
+				}
+			}
+			if (iteratee) {
+				// 有迭代器的情况下
+				seen.push(computed); // 结果推入缓存容器
+			}
+			result.push(value); // 追加入结果数组
+		}
+	}
+	console.timeEnd('共花费了');
+	return result; // 循环完成，返回去重后的数组
+};
+
+console.log(
+	baseUniq([
+		{
+			uuid: null,
+			title: '制酒主原料',
+			content: '糯红高粱、小麦、水',
+		},
+		{
+			uuid: null,
+			title: '原料产区',
+			content: '糯红高粱:贵州\n小麦:河南',
+		},
+		{
+			uuid: null,
+			title: '基酒生产',
+			content: '贵州国台酒业股份有限公司',
+		},
+		{
+			uuid: null,
+			title: '制酒主原料',
+			content: '糯红高粱、小麦、水',
+		},
+	]),
+);
+// module.exports = baseUniq;
