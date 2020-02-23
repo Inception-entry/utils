@@ -1,8 +1,8 @@
 /*
  * @Author: batman
  * @Date: 2020-01-14 11:21:52
- * @LastEditors  : shengkesi
- * @LastEditTime : 2020-01-20 13:54:39
+ * @LastEditors  : batman
+ * @LastEditTime : 2020-01-20 15:02:09
  * @Description: 返回一个新的自由数组副本(时间复杂度O(n²))
  */
 import createSet from './createSet';
@@ -19,7 +19,6 @@ const LARGE_ARRAY_SIZE = 200;
  * @usage 当前只能应用无迭代器，无比较器的情况
  */
 const baseUniq = (array, iteratee, comparator) => {
-	console.time('共花费了');
 	let index = -1;
 	let isCommon = true; // 初始化为普通函数
 	const { length } = array;
@@ -56,7 +55,6 @@ const baseUniq = (array, iteratee, comparator) => {
 			result.push(value); // 追加入结果数组
 		}
 	}
-	console.timeEnd('共花费了');
 	return result; // 循环完成，返回去重后的数组
 };
 export default baseUniq;
