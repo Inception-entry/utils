@@ -1,4 +1,4 @@
-let baseUniq = require('./.internal/baseUniq');
+import baseUniq from './.internal/baseUniq';
 /**
  * @description 数组去重函数，数组中的元素是对象，数组，等用的
  * @category Array

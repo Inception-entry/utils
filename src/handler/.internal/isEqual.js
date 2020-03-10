@@ -1,4 +1,4 @@
-var baseIsEqual = require('./baseIsEqual');
+import baseIsEqual from './baseIsEqual';
 
 /**
  * Performs a deep comparison between two values to determine if they are
@@ -28,8 +28,8 @@ var baseIsEqual = require('./baseIsEqual');
  * object === other;
  * // => false
  */
-function isEqual(value, other) {
+const isEqual = (value, other) => {
 	return baseIsEqual(value, other);
-}
+};
 
-module.exports = isEqual;
+export default isEqual;
