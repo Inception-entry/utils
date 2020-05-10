@@ -1,7 +1,7 @@
 /*
  * @Author: batman
  * @Date: 2019-12-21 23:00:33
- * @LastEditors  : shengkesi
+ * @LastEditors  : sanks
  * @LastEditTime : 2020-01-20 14:01:38
  * @Description: 表单合法性校验,多数用于WAP，h5, app 等移动端的开发，（用ES6语法重新编写过）
  */

@@ -71,7 +71,6 @@ function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
 	if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
 		var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
 			othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
-
 		if (objIsWrapped || othIsWrapped) {
 			var objUnwrapped = objIsWrapped ? object.value() : object,
 				othUnwrapped = othIsWrapped ? other.value() : other;

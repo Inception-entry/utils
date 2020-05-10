@@ -29,3 +29,5 @@ tools for front-end development
 ## formatTime 格式化时间 2019-12-31 10:08:46
 
 ## handler 文件夹 数组去重
+
+## decimal 文件夹 浮点数精度
