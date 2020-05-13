@@ -31,3 +31,7 @@ tools for front-end development
 ## handler 文件夹 数组去重
 
 ## decimal 文件夹 浮点数精度
+
+## debounce 防抖动
+
+## throttle 节流
