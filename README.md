@@ -4,19 +4,11 @@ tools for front-end development
 
 # 后台工具类函数(nodejs)
 
-## normalizeUA
+## isMobile -> isIOS || isAndroid 判断手机的操作系统
 
-## isPhone
+## slugify 对 URL，文件名和 ID 有用。 它正确处理德语变音符号，越南语，阿拉伯语，俄语，罗马尼亚语，土耳其语等。
 
-## isIOS
-
-## isAndroid
-
-## isMobile
-
-## slugify
-
-## wait
+## wait 延时等待一定时间执行的, 异步变换同步的处理函数
 
 ## -----------------------------------------------------------
 

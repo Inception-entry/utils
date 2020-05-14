@@ -25,14 +25,10 @@ const formatTime = (type, value) => {
 				result = `${format(year)}-${format(month)}-${format(day)}`;
 				break;
 			case 3: //2017-08-15 13:37
-				result = `${format(year)}-${format(month)}-${format(day)} ${format(hour)}:${format(
-					minute,
-				)}`;
+				result = `${format(year)}-${format(month)}-${format(day)} ${format(hour)}:${format(minute)}`;
 				break;
 			case 4: //2017-08-15 13:39:03
-				result = `${format(year)}-${format(month)}-${format(day)} ${format(hour)}:${format(
-					minute,
-				)}:${format(seconds)}`;
+				result = `${format(year)}-${format(month)}-${format(day)} ${format(hour)}:${format(minute)}:${format(seconds)}`;
 				break;
 			default:
 				result = value;
