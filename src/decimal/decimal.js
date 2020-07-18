@@ -1,8 +1,8 @@
 /** ES6 模块方式 */
 
 import { Decimal } from 'decimal.js';
-import { muldivfloat } from './test1';
-import { floatObj } from './test2';
+import { muldivfloat } from './muldivfloat';
+import { floatObj } from './floatObj';
 
 export { Decimal, muldivfloat, floatObj };
 /* var a = 0.13;

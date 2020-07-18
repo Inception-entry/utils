@@ -10,7 +10,7 @@ import { formatTime } from './src/time';
 import { stopBubble } from './src/bubble';
 import { debounce, throttle } from './src/debounce_throttle';
 import { Validator } from './src/validation/validator';
-import { isEqual, uniq, uniqWith, uniqBy } from './src/handler/index';
+import { baseIsEqual, isEqual, uniq, uniqWith, uniqBy } from './src/handler/index';
 import { Decimal, muldivfloat, floatObj } from './src/decimal/decimal';
 
-export { formatMobile, formatTime, stopBubble, debounce, throttle, Validator, isEqual, uniq, uniqWith, uniqBy,  Decimal, muldivfloat, floatObj};
+export { formatMobile, formatTime, stopBubble, debounce, throttle, Validator, baseIsEqual, isEqual, uniq, uniqWith, uniqBy, Decimal, muldivfloat, floatObj };
