@@ -19,7 +19,7 @@
  * floatObj.multiply(19.9, 100) >> 1990
  *
  */
-var floatObj = (function() {
+var floatObj = (function () {
 	/*
 	 * 判断obj是否为一个整数
 	 */
@@ -69,34 +69,34 @@ var floatObj = (function() {
 		var max = t1 > t2 ? t1 : t2;
 		var result = null;
 		switch (op) {
-		case 'add':
-			if (t1 === t2) {
-				// 两个小数位数相同
-				result = n1 + n2;
-			} else if (t1 > t2) {
-				// o1 小数位 大于 o2
-				result = n1 + n2 * (t1 / t2);
-			} else {
-				// o1 小数位 小于 o2
-				result = n1 * (t2 / t1) + n2;
-			}
-			return result / max;
-		case 'subtract':
-			if (t1 === t2) {
-				result = n1 - n2;
-			} else if (t1 > t2) {
-				result = n1 - n2 * (t1 / t2);
-			} else {
-				result = n1 * (t2 / t1) - n2;
-			}
-			return result / max;
-		case 'multiply':
-			result = (n1 * n2) / (t1 * t2);
-			return result;
-		case 'divide':
-			result = (n1 / n2) * (t2 / t1);
-			return result;
-		default:
+			case 'add':
+				if (t1 === t2) {
+					// 两个小数位数相同
+					result = n1 + n2;
+				} else if (t1 > t2) {
+					// o1 小数位 大于 o2
+					result = n1 + n2 * (t1 / t2);
+				} else {
+					// o1 小数位 小于 o2
+					result = n1 * (t2 / t1) + n2;
+				}
+				return result / max;
+			case 'subtract':
+				if (t1 === t2) {
+					result = n1 - n2;
+				} else if (t1 > t2) {
+					result = n1 - n2 * (t1 / t2);
+				} else {
+					result = n1 * (t2 / t1) - n2;
+				}
+				return result / max;
+			case 'multiply':
+				result = (n1 * n2) / (t1 * t2);
+				return result;
+			case 'divide':
+				result = (n1 / n2) * (t2 / t1);
+				return result;
+			default:
 		}
 	}
 
