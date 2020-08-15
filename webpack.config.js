@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
-	entry: path.join(__dirname, './index.js'),
+	entry: ['@babel/polyfill', './index.js'],
 	output: {
 		path: path.join(__dirname, 'dist/'),
 		filename: 'index.js',
@@ -12,12 +12,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(js|jsx)$/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: ['es2015'],
-					},
-				},
+				use: 'babel-loader',
 				exclude: /node_modules/,
 			},
 		],
