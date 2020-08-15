@@ -1,8 +1,8 @@
 {
 	"name": "awesome-utils-normal",
-	"version": "1.0.20",
+	"version": "1.1.1",
 	"description": "tools for front-end development ",
-	"main": "dist/index.js",
+	"main": "index.js",
 	"repository": {
 		"url": "https://github.com/Inception-entry/utils.git",
 		"type": "git"
