@@ -57,12 +57,13 @@ import { debounce } from 'awesome-utils-normal';
 
 ```js
 created() {
-	this.\_DB = debounce({ fn: this.handleSubmit, wait: 1000, immediate: true });
+	this._DB = debounce({ fn: this.handleSubmit, wait: 1000, immediate: true });
 },
 methods: {
-	\_debounce(e) {
-	e.preventDefault();
-	this.\_DB();
+	_debounce(e) {
+		e.preventDefault();
+		this._DB();
+	}
 }
 ```
 
@@ -73,7 +74,7 @@ methods: {
 	:form="form"
 	:label-col="{ span: 5 }"
 	:wrapper-col="{ span: 12 }"
-	@submit="\_debounce"
+	@submit="_debounce"
 >
 ...
 </form>
