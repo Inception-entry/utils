@@ -92,4 +92,4 @@ function clearpoint(num, str) {
 	return num.toString().replace(str, '');
 }
 
-export {muldivfloat};
+export { muldivfloat };

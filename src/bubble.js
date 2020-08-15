@@ -5,13 +5,6 @@
  * @LastEditTime : 2020-01-01 17:04:33
  * @Description:
  */
-
-/**
- * @name:
- * @usage:
- * @param {type}
- * @return:
- */
 const stopBubble = (e) => {
 	// 如果提供了事件对象，则这是一个非IE浏览器
 	if (e && e.stopPropagation) {
