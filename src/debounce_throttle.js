@@ -1,7 +1,7 @@
 /*
- * @Author: sanks
+ * @Author: batman
  * @Date: 2020-05-13 08:50:16
- * @LastEditors: sanks
+ * @LastEditors: batman
  * @LastEditTime: 2020-05-13 15:58:07
  * @Description: 函数防抖
  * @param func 函数
@@ -22,7 +22,7 @@ function debounceOrThrottle({ fn, wait = 300, immediate = false, executeOncePerW
 	let result = null;
 	let lastExecutedTime = null;
 
-	const later = function() {
+	const later = function () {
 		const last = Date.now() - (executeOncePerWait ? lastExecutedTime : lastTriggerTime);
 
 		if (last < wait && last > 0) {
@@ -38,7 +38,7 @@ function debounceOrThrottle({ fn, wait = 300, immediate = false, executeOncePerW
 		}
 	};
 
-	return function() {
+	return function () {
 		context = this;
 		args = arguments;
 		!executeOncePerWait && (lastTriggerTime = Date.now());

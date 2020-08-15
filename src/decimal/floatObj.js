@@ -19,6 +19,7 @@
  * floatObj.multiply(19.9, 100) >> 1990
  *
  */
+/* eslint-disable indent */
 var floatObj = (function () {
 	/*
 	 * 判断obj是否为一个整数

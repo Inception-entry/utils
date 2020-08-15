@@ -1,13 +1,13 @@
 /*
  * @Author: batman
  * @Date: 2019-12-21 23:00:33
- * @LastEditors  : sanks
+ * @LastEditors  : batman
  * @LastEditTime : 2020-01-20 14:01:38
  * @Description: 表单合法性校验,多数用于WAP，h5, app 等移动端的开发，（用ES6语法重新编写过）
  */
-Function.prototype.before = function(beforefn) {
+Function.prototype.before = function (beforefn) {
 	var _self = this; // 保存原函数的引用
-	return function() {
+	return function () {
 		// 返回了原函数和新函数的“代理”函数
 		// 执行新函数，且保证this不被劫持，新函数的接受的参数也会被原封不动地传入原函数，新函数在原函数之前执行。
 		if (beforefn.apply(this, arguments) === false) {
@@ -18,9 +18,9 @@ Function.prototype.before = function(beforefn) {
 	};
 };
 
-Function.prototype.after = function(afterfn) {
+Function.prototype.after = function (afterfn) {
 	var _self = this;
-	return function() {
+	return function () {
 		var ret = _self.apply(this, arguments);
 		afterfn.apply(this, arguments);
 		return ret;
@@ -28,22 +28,22 @@ Function.prototype.after = function(afterfn) {
 };
 
 const strategies = {
-	isNonEmpty: function(value, name) {
+	isNonEmpty: function (value, name) {
 		if (value === '') {
 			return name + '不能为空';
 		}
 	},
-	minLength: function(value, length, name) {
+	minLength: function (value, length, name) {
 		if (value.length < length) {
 			return name + '长度不能小于' + length + '位';
 		}
 	},
-	maxLength: function(value, length, name) {
+	maxLength: function (value, length, name) {
 		if (value.length > length) {
 			return name + '长度不能大于' + length + '位';
 		}
 	},
-	isMobile: function(value, name) {
+	isMobile: function (value, name) {
 		if (!/(^1[0-9]{10}$)/.test(value)) {
 			return name + '格式不正确';
 		}
@@ -57,10 +57,10 @@ class Validator {
 	add(dom, rules) {
 		var self = this;
 		for (let [strategy, value] of rules.entries()) {
-			(function() {
+			(function () {
 				var strategyAry = strategy.split(':');
 				var name = value;
-				self.cache.push(function() {
+				self.cache.push(function () {
 					var strategy = strategyAry.shift();
 					strategyAry.unshift(dom.value);
 					strategyAry.push(name);
@@ -83,7 +83,7 @@ class Validator {
 	}
 }
 
-export  {Validator};
+export { Validator };
 
 /*  调用示例 */
 /* var registerForm = document.getElementById('registerForm');

@@ -1,5 +1,3 @@
-/** ES6 模块方式 */
-
 import { Decimal } from 'decimal.js';
 import { muldivfloat } from './muldivfloat';
 import { floatObj } from './floatObj';

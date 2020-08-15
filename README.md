@@ -38,6 +38,10 @@ decimal 文件夹
 - muldivfloat 浮点数精度（只有乘法、除法）
 - floatObj 浮点数精度（加、减、乘、除）
 
+例如：a \* b = new Decimal(a).mul(new Decimal(b)).toNumber
+a \* b = muldivfloat(a, b, '\*')
+a \* b = floatObj.multiply(a, b)
+
 debounce 防抖动
 
 throttle 节流
