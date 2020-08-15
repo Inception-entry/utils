@@ -57,7 +57,11 @@ import { debounce } from 'awesome-utils-normal';
 
 ```js
 created() {
-	this._DB = debounce({ fn: this.handleSubmit, wait: 1000, immediate: true });
+	this._DB = debounce({
+		fn: this.handleSubmit,
+		wait: 1000,
+		immediate: true
+	});
 },
 methods: {
 	_debounce(e) {
