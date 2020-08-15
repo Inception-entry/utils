@@ -1,6 +1,6 @@
 {
 	"name": "awesome-utils-normal",
-	"version": "1.0.19",
+	"version": "1.0.20",
 	"description": "tools for front-end development ",
 	"main": "dist/index.js",
 	"repository": {
