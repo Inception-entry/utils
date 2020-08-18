@@ -21,13 +21,16 @@ const formatTime = (type, value) => {
 			case 1: // 11:11
 				result = `${format(hour)}:${format(minute)}`;
 				break;
-			case 2: //2017-08-15
+			case 2: //2017-08
+				result = `${format(year)}-${format(month)}`;
+				break;
+			case 3: //2017-08-15
 				result = `${format(year)}-${format(month)}-${format(day)}`;
 				break;
-			case 3: //2017-08-15 13:37
+			case 4: //2017-08-15 13:37
 				result = `${format(year)}-${format(month)}-${format(day)} ${format(hour)}:${format(minute)}`;
 				break;
-			case 4: //2017-08-15 13:39:03
+			case 5: //2017-08-15 13:39:03
 				result = `${format(year)}-${format(month)}-${format(day)} ${format(hour)}:${format(minute)}:${format(seconds)}`;
 				break;
 			default:

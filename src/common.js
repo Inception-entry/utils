@@ -7,7 +7,7 @@
  */
 const slugify = require('slugify');
 
-slugify.extend({'/': '-'});
+slugify.extend({ '/': '-' });
 
 //Some weired phone brands with weired browser features support
 // 一些支持奇怪的浏览器功能的奇怪的手机品牌
@@ -43,12 +43,12 @@ exports.isMobile = function isMobile(ua) {
 	return this.isIOS(ua) || this.isAndroid(ua);
 };
 
-exports.slugify = function(input) {
+exports.slugify = function (input) {
 	return slugify(input);
 };
 
-exports.wait = function(ms = 0) {
-	return new Promise(resolve => {
+exports.wait = function (ms = 0) {
+	return new Promise((resolve) => {
 		setTimeout(resolve, ms);
 	});
 };

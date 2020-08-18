@@ -12,5 +12,6 @@ import { debounce, throttle } from './src/debounce_throttle';
 import { Validator } from './src/validation/validator';
 import { baseIsEqual, isEqual, uniq, uniqWith, uniqBy } from './src/handler/index';
 import { Decimal, muldivfloat, floatObj } from './src/decimal/decimal';
+import { deepCopy, shallowCopy } from './src/clone/index';
 
-export { formatMobile, formatTime, stopBubble, debounce, throttle, Validator, baseIsEqual, isEqual, uniq, uniqWith, uniqBy, Decimal, muldivfloat, floatObj };
+export { formatMobile, formatTime, stopBubble, debounce, throttle, Validator, baseIsEqual, isEqual, uniq, uniqWith, uniqBy, Decimal, muldivfloat, floatObj, deepCopy, shallowCopy };
