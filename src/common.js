@@ -9,6 +9,16 @@ const slugify = require('slugify');
 
 slugify.extend({ '/': '-' });
 
+exports.slugify = function (input) {
+	return slugify(input);
+};
+
+exports.wait = function (ms = 0) {
+	return new Promise((resolve) => {
+		setTimeout(resolve, ms);
+	});
+};
+
 //Some weired phone brands with weired browser features support
 // 一些支持奇怪的浏览器功能的奇怪的手机品牌
 const weiredBrands = [];
@@ -19,7 +29,7 @@ exports.normalizeUA = function normalizeUA(ua) {
 	return String(ua || '').toLowerCase();
 };
 
-exports.isPhone = function isPhone(ua) {
+const isPhone = (ua) => {
 	ua = this.normalizeUA(ua);
 	for (const phone of weiredBrands) {
 		if (ua.indexOf(phone) >= 0) {
@@ -29,26 +39,29 @@ exports.isPhone = function isPhone(ua) {
 	return false;
 };
 
-exports.isIOS = function isIOS(ua) {
+const isIOS = (ua) => {
 	ua = this.normalizeUA(ua);
 	return ua.indexOf('iphone') >= 0 || ua.indexOf('ipad') >= 0;
 };
 
-exports.isAndroid = function isAndroid(ua) {
+const isAndroid = (ua) => {
 	ua = this.normalizeUA(ua);
 	return ua.indexOf('android') >= 0;
 };
 
-exports.isMobile = function isMobile(ua) {
+const isMobile = (ua) => {
 	return this.isIOS(ua) || this.isAndroid(ua);
 };
 
-exports.slugify = function (input) {
-	return slugify(input);
+// 返回一个数组截断前n个元素组成的数组，从索引0开始截断。
+const slasher = (arr, howMany) => {
+	var arr1 = [];
+	if (arr.length === howMany) {
+		return arr;
+	} else {
+		arr1 = arr.splice(0, howMany);
+	}
+	return arr1;
 };
 
-exports.wait = function (ms = 0) {
-	return new Promise((resolve) => {
-		setTimeout(resolve, ms);
-	});
-};
+export { isPhone, isIOS, isAndroid, isMobile, slasher };

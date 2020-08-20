@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 //时间格式化
-const formatTime = (type, value) => {
+const parseTime = (type, value) => {
 	let result;
 	if (value === true) {
 		result = '是';
@@ -47,4 +47,40 @@ const format = (value) => {
 	return value >= 10 ? value + '' : '0' + value;
 };
 
-export { formatTime };
+//时间差
+/**
+ * @param {number} time
+ * @param {string} type
+ * @returns {string}
+ */
+const formatTime = (time, type) => {
+	if (String(time).length === 10) {
+		// 秒
+		time = parseInt(time) * 1000;
+	} else {
+		// 毫秒
+		time = +time;
+	}
+	const d = new Date(time);
+	const now = Date.now();
+
+	const diff = (now - d) / 1000;
+
+	if (diff < 30) {
+		return '刚刚';
+	} else if (diff < 3600) {
+		// less 1 hour
+		return Math.ceil(diff / 60) + '分钟前';
+	} else if (diff < 3600 * 24) {
+		return Math.ceil(diff / 3600) + '小时前';
+	} else if (diff < 3600 * 24 * 2) {
+		return '1天前';
+	}
+	if (type) {
+		return parseTime(time, type);
+	} else {
+		return d.getMonth() + 1 + '月' + d.getDate() + '日' + d.getHours() + '时' + d.getMinutes() + '分';
+	}
+};
+
+export { parseTime, formatTime };

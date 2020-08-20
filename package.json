@@ -1,6 +1,6 @@
 {
 	"name": "awesome-utils-normal",
-	"version": "1.1.4",
+	"version": "1.1.5",
 	"description": "tools for front-end development ",
 	"main": "index.js",
 	"repository": {
@@ -8,15 +8,17 @@
 		"type": "git"
 	},
 	"keywords": [
-		"clone",
 		"decimal",
 		"bubble",
 		"debounce",
 		"throttle",
 		"deepClone",
-		"shallowClone",
-		"format mobile",
-		"format time",
+		"clone",
+		"format ",
+		"phone",
+		"time",
+		"money",
+		"card",
 		"克隆",
 		"浮点数精度",
 		"阻止冒泡",
@@ -24,8 +26,11 @@
 		"节流",
 		"深拷贝",
 		"浅拷贝",
-		"手机号格式化",
-		"日期格式化"
+		"格式化",
+		"手机号",
+		"日期",
+		"千分符",
+		"银行卡号"
 	],
 	"bugs": "https://github.com/Inception-entry/utils/issues",
 	"author": "Inception-entry<batman_gotham@126.com>",

@@ -1,4 +1,4 @@
-import { deepCopy } from './deepCopy.js';
-import { shallowCopy } from './shallowCopy.js';
+import { deepCopy } from './deepCopy';
+import { shallowCopy } from './shallowCopy';
 
 export { deepCopy, shallowCopy };
