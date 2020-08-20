@@ -10,27 +10,24 @@ tools for front-end development
 
 ### wait
 
-延时等待一定时间执行的, 异步变换同步的处理函数
+延时等待一定时间执行的处理函数
 
 ---
 
 ## 前台工具类函数（页面实用型函数）
 
+isPhone 除 Android，iPhone 以外的手机操作系统（待完善）
+
 isMobile -> isIOS || isAndroid 判断手机的操作系统
+
+slasher 返回一个数组截断前 n 个元素组成的数组，从索引 0 开始截断
 
 stopBubble 阻止冒泡
 
-formatMobile 格式化手机号码 138 4383 8438
+### clone 文件夹
 
-formatTime 格式化时间 2019-12-31 10:08:46
-
-### handler 文件夹
-
-- baseIsEqual 数组或对象比较是否相等（有序、无序均可比较）
-- isEqual 数组或对象比较是否相等（有序比较）
-- uniq 数组去重
-- uniqWith 数组去重
-- uniqBy 数组去重
+- deepCopy 深拷贝
+- shallowCopy 浅拷贝
 
 ### decimal 文件夹
 
@@ -44,9 +41,30 @@ formatTime 格式化时间 2019-12-31 10:08:46
 - a \* b = muldivfloat(a, b, '\*')
 - a \* b = floatObj.multiply(a, b)
 
+### format 文件夹
+
+- formatPhone 格式化手机号码 138 4383 8438
+- parseTime 格式化时间 2019-12-31 10:08:46
+- formatTime 距今相隔多久的时间格式化工具 1 天前
+- formatThousandthMoney 千分符分隔数字 1,888,999
+- formatCardNo 格式化银行卡号 0000 0000 0000 0000
+
+### handler 文件夹
+
+- baseIsEqual 数组或对象比较是否相等（有序、无序均可比较）
+- isEqual 数组或对象比较是否相等（有序比较）
+- uniq 数组去重（常用）
+- uniqWith 数组去重
+- uniqBy 数组去重
+
+### validation 文件夹
+
+- isIdNo 验证身份证号格式是否正确
+
 ### debounce 防抖动
 
 在 vue 中的使用方法：
+
 第一步：
 
 ```js
