@@ -25,12 +25,12 @@ const weiredBrands = [];
 
 //some UA related utilities, and some simple device check
 // 一些UA相关的实用程序，和一些简单的设备检查
-exports.normalizeUA = function normalizeUA(ua) {
+const normalizeUA = (ua) => {
 	return String(ua || '').toLowerCase();
 };
 
 const isPhone = (ua) => {
-	ua = this.normalizeUA(ua);
+	ua = normalizeUA(ua);
 	for (const phone of weiredBrands) {
 		if (ua.indexOf(phone) >= 0) {
 			return true;
@@ -40,12 +40,12 @@ const isPhone = (ua) => {
 };
 
 const isIOS = (ua) => {
-	ua = this.normalizeUA(ua);
+	ua = normalizeUA(ua);
 	return ua.indexOf('iphone') >= 0 || ua.indexOf('ipad') >= 0;
 };
 
 const isAndroid = (ua) => {
-	ua = this.normalizeUA(ua);
+	ua = normalizeUA(ua);
 	return ua.indexOf('android') >= 0;
 };
 
