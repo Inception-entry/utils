@@ -5,7 +5,7 @@
  * @LastEditTime: 2019-12-16 13:48:28
  * @Description: 一些常用工具函数
  */
-const slugify = require('slugify');
+/* const slugify = require('slugify');
 
 slugify.extend({ '/': '-' });
 
@@ -17,7 +17,7 @@ exports.wait = function (ms = 0) {
 	return new Promise((resolve) => {
 		setTimeout(resolve, ms);
 	});
-};
+}; */
 
 //Some weired phone brands with weired browser features support
 // 一些支持奇怪的浏览器功能的奇怪的手机品牌
@@ -64,4 +64,10 @@ const slasher = (arr, howMany) => {
 	return arr1;
 };
 
-export { isPhone, isIOS, isAndroid, isMobile, slasher };
+const wait = (ms = 0) => {
+	return new Promise((resolve) => {
+		setTimeout(resolve, ms);
+	});
+};
+
+export { isPhone, isIOS, isAndroid, isMobile, slasher, wait };

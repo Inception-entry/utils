@@ -8,10 +8,6 @@ tools for front-end development
 
 对 URL，文件名和 ID 有用。 它正确处理德语变音符号，越南语，阿拉伯语，俄语，罗马尼亚语，土耳其语等。
 
-### wait
-
-延时等待一定时间执行的处理函数
-
 ---
 
 ## 前台工具类函数（页面实用型函数）
@@ -21,6 +17,8 @@ isPhone 除 Android，iPhone 以外的手机操作系统（待完善）
 isMobile -> isIOS || isAndroid 判断手机的操作系统
 
 slasher 返回一个数组截断前 n 个元素组成的数组，从索引 0 开始截断
+
+wait 延时等待一定时间执行的处理函数
 
 stopBubble 阻止冒泡
 
