@@ -4,7 +4,17 @@
 			"@babel/preset-env",
 			{
 				"useBuiltIns": "usage",
-				"modules": false
+				"modules": false,
+				//  指定core-js版本
+				"corejs": {
+					"version": 3
+				},
+				//  指定兼容性到浏览器的哪个版本
+				"targets": {
+					"chrome": "60",
+					"firefox": "60",
+					"safari": "50"
+				}
 			}
 		]
 	],

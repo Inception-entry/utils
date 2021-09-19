@@ -14,11 +14,13 @@ tools for front-end development
 
 isPhone 除 Android，iPhone 以外的手机操作系统（待完善）
 
-isMobile -> isIOS || isAndroid 判断手机的操作系统
+isMobile -> isIOS || isAndroid || isPhone 判断手机的操作系统
 
 slasher 返回一个数组截断前 n 个元素组成的数组，从索引 0 开始截断
 
 wait 延时等待一定时间执行的处理函数
+
+pickProperty 提取对象中的一些属性成为一个新的对象，类似 lodash 的 pick
 
 stopBubble 阻止冒泡
 
@@ -58,6 +60,18 @@ stopBubble 阻止冒泡
 ### validation 文件夹
 
 - isIdNo 验证身份证号格式是否正确
+- isPhoneNo 验证手机号码格式是否正确
+- isCarNo 验证车牌号号码格式是否正确
+- isVehicleNo 验证车架号号码格式是否正确
+- isEmojiCharacter 判断输入框是否有表情
+- dealImage 压缩图片
+- getImgData 图片转成 base64
+
+### hook 文件夹
+
+- syncHook 同步钩子
+- asyncHook 异步回调钩子
+- asyncPromiseHook 异步 Promise 钩子
 
 ### debounce 防抖动
 

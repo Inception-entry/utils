@@ -8,7 +8,13 @@
 			"end": " */", // 自定义注释尾部
 			"use": false // 是否使用自定义注释符号
 		},
-		"language": ["js", "jsx", "ts", "tsx", "scss"],
+		"language": [
+			"js",
+			"jsx",
+			"ts",
+			"tsx",
+			"scss"
+		],
 		"headInsertLine": {
 			"js": 2, // js后缀的文件，在第二行插入文件头部注释
 			"jsx": 2,
@@ -22,7 +28,10 @@
 		},
 		"timeNoDetail": false, // 设为true精确到日期
 		"autoAlready": true, // 默认开启:只让支持的语言，自动添加头部注释. false:所有文件自动添加头部注释
-		"prohibitAutoAdd": ["json", "md"], // 禁止.json .md文件，自动添加头部注释
+		"prohibitAutoAdd": [
+			"json",
+			"md"
+		], // 禁止.json .md文件，自动添加头部注释
 		"autoAddLine": 100 // 默认文件超过100行就不再自动添加头部注释
 	},
 	// 文件头部注释
@@ -48,7 +57,6 @@
 		"source.fixAll.eslint": true
 	},
 	"editor.tabSize": 2,
-	"eslint.enable": true,
 	"eslint.format.enable": true,
 	"prettier.requireConfig": true,
 	"prettier.printWidth": 200,
