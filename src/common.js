@@ -2,8 +2,8 @@
 /*
  * @Author: batman
  * @Date: 2019-12-14 01:17:18
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2019-12-16 13:48:28
+ * @LastEditors: batman
+ * @LastEditTime: 2022-03-08 14:28:56
  * @Description: 一些常用工具函数
  */
 /* const slugify = require('slugify');
@@ -76,11 +76,4 @@ const wait = (ms = 0) => {
 	});
 };
 
-// 提取对象中的一些属性成为一个新的对象，类似 lodash 的 pick
-const pickProperty = (obj, array) => {
-	let inclusivePick = (obj, ...keys) => Object.fromEntries(keys.map((key) => [key, obj[key]]));
-	let subset = inclusivePick(obj, ...array);
-	return subset;
-};
-
-export { isPhone, isIOS, isAndroid, isMobile, slasher, wait, pickProperty };
+export { isPhone, isIOS, isAndroid, isMobile, slasher, wait };
