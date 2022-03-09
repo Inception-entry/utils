@@ -1,9 +1,9 @@
 /*
  * @Author: batman
  * @Date: 2019-12-21 06:40:50
- * @LastEditors  : batman
- * @LastEditTime : 2020-01-01 17:04:33
- * @Description:
+ * @LastEditors: batman
+ * @LastEditTime: 2022-03-09 14:49:39
+ * @Description: 阻止事件冒泡
  */
 const stopBubble = (e) => {
 	// 如果提供了事件对象，则这是一个非IE浏览器

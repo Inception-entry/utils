@@ -55,7 +55,7 @@ const idNoCheck = {
 	//校验日期
 	verifyBirthday: function (year, month, day, birthday) {
 		let now = new Date();
-		let now_year = now.getFullYear();
+		// let now_year = now.getFullYear();
 		//年月日是否合理
 		if (birthday.getFullYear() == year && birthday.getMonth() + 1 == month && birthday.getDate() == day) {
 			//判断年份的范围（0岁到100岁之间)

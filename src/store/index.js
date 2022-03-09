@@ -2,7 +2,7 @@
  * @Author: batman
  * @Date: 2022-03-08 16:51:34
  * @LastEditors: batman
- * @LastEditTime: 2022-03-08 16:53:11
+ * @LastEditTime: 2022-03-09 15:03:50
  * @Description: 存储localStorage和sessionStorage的方法
  * 注：此方法生成的storage的key有前缀“verify-”，这样可以分辨出这些前缀的key是你的站点
  * 的存储变量
@@ -11,7 +11,7 @@
 /* eslint-disable indent */
 import { validatenull } from '../validation/validate';
 
-const keyName = 'verify-';
+const keyName = 'awesome-';
 /**
  * 存储localStorage
  */
