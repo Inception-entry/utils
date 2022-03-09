@@ -53,14 +53,7 @@ methods: {
 第三步：
 
 ```html
-<a-form
-	:form="form"
-	:label-col="{ span: 5 }"
-	:wrapper-col="{ span: 12 }"
-	@submit="_debounce"
->
-...
-</form>
+<form :form="form" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }" @submit="_debounce">...</form>
 ```
 
 ### throttle 节流(用法同 debounce)
