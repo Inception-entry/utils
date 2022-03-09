@@ -3,7 +3,7 @@
  * @Author: batman
  * @Date: 2019-12-14 01:17:18
  * @LastEditors: batman
- * @LastEditTime: 2022-03-08 14:28:56
+ * @LastEditTime: 2022-03-09 14:56:35
  * @Description: 一些常用工具函数
  */
 /* const slugify = require('slugify');
@@ -12,12 +12,6 @@ slugify.extend({ '/': '-' });
 
 exports.slugify = function (input) {
 	return slugify(input);
-};
-
-exports.wait = function (ms = 0) {
-	return new Promise((resolve) => {
-		setTimeout(resolve, ms);
-	});
 }; */
 
 //Some weired phone brands with weired browser features support
@@ -56,7 +50,19 @@ const isAndroid = (ua) => {
 // 判断设备是否处于移动端
 const isMobile = () => {
 	const ua = navigator.userAgent;
-	return this.isIOS(ua) || this.isAndroid(ua) || this.isPhone(ua);
+	return isIOS(ua) || isAndroid(ua) || isPhone(ua);
+};
+
+const isWeixinBrowser = () => {
+	// 判断是否是微信浏览器
+	let ua = navigator.userAgent.toLowerCase();
+	let isWeixinBroswer = false;
+	if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+		isWeixinBroswer = true;
+	} else {
+		isWeixinBroswer = false;
+	}
+	return isWeixinBroswer;
 };
 
 // 返回一个数组截断前n个元素组成的数组，从索引0开始截断。
@@ -76,4 +82,4 @@ const wait = (ms = 0) => {
 	});
 };
 
-export { isPhone, isIOS, isAndroid, isMobile, slasher, wait };
+export { isPhone, isIOS, isAndroid, isMobile, isWeixinBrowser, slasher, wait };
