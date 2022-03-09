@@ -1,6 +1,6 @@
 {
 	"name": "awesome-utils-normal",
-	"version": "1.1.16",
+	"version": "1.1.17",
 	"description": "tools for front-end development ",
 	"main": "index.js",
 	"repository": {
@@ -22,6 +22,10 @@
 		"syncHook",
 		"asyncHook",
 		"asyncPromiseHook",
+		"compress",
+		"restore",
+		"localStorage",
+		"seesionStorage",
 		"克隆",
 		"浮点数精度",
 		"阻止冒泡",
@@ -36,7 +40,11 @@
 		"银行卡号",
 		"同步钩子",
 		"同步回调钩子",
-		"异步Promise钩子"
+		"异步Promise钩子",
+		"压缩图片",
+		"还原图片",
+		"本地存储",
+		"会话存储"
 	],
 	"bugs": "https://github.com/Inception-entry/utils/issues",
 	"author": "Inception-entry<batman_gotham@126.com>",
