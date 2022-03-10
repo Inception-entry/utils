@@ -2,7 +2,7 @@
  * @Author: batman
  * @Date: 2019-12-11 15:44:07
  * @LastEditors: batman
- * @LastEditTime: 2022-03-10 09:51:27
+ * @LastEditTime: 2022-03-10 13:53:28
  * @Description: 入口
  */
 
@@ -33,7 +33,7 @@ import { baseIsEqual, isEqual, uniq, uniqWith, uniqBy } from './src/handler/inde
 // import { PromiseHook } from './src/hook/asyncPromiseHook';
 import { handleImg, urltoImage } from './src/images';
 import { setStore, getStore, removeStore, getAllStore, clearStore } from './src/store';
-import { Validator } from './src/validation/validator';
+// import { Validator } from './src/validation/validator';
 import { isIdNo, isPhoneNo, isCarNo, isVehicleNo, isEmojiCharacter, dealImage, getImgData, validatenull, validateEmail } from './src/validation/validate';
 
 export {
@@ -81,7 +81,7 @@ export {
 	removeStore,
 	getAllStore,
 	clearStore,
-	Validator,
+	/* Validator, */
 	isIdNo,
 	isPhoneNo,
 	isCarNo,
