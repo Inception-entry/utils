@@ -2,7 +2,7 @@
  * @Author: batman
  * @Date: 2019-12-11 15:44:07
  * @LastEditors: batman
- * @LastEditTime: 2022-03-09 15:06:43
+ * @LastEditTime: 2022-03-10 09:51:27
  * @Description: 入口
  */
 
@@ -16,6 +16,8 @@ import {
 	parseTime,
 	formatTime,
 	formatThousandthMoney,
+	formatCardNo,
+	randomGenerate,
 	pickProperty,
 	escapeProperty,
 	restoreProperty,
@@ -26,13 +28,13 @@ import {
 	getElementTop,
 } from './src/format/index';
 import { baseIsEqual, isEqual, uniq, uniqWith, uniqBy } from './src/handler/index';
-import { Validator } from './src/validation/validator';
-import { isIdNo, isPhoneNo, isCarNo, isVehicleNo, isEmojiCharacter, dealImage, getImgData } from './src/validation/validate';
-import { handleImg, urltoImage } from './src/images';
-import { setStore, getStore, removeStore, getAllStore, clearStore } from './src/store';
 // import { Hook } from './src/hook/syncHook';
 // import { AsyncHook } from './src/hook/asyncHook';
 // import { PromiseHook } from './src/hook/asyncPromiseHook';
+import { handleImg, urltoImage } from './src/images';
+import { setStore, getStore, removeStore, getAllStore, clearStore } from './src/store';
+import { Validator } from './src/validation/validator';
+import { isIdNo, isPhoneNo, isCarNo, isVehicleNo, isEmojiCharacter, dealImage, getImgData, validatenull, validateEmail } from './src/validation/validate';
 
 export {
 	isPhone,
@@ -54,6 +56,8 @@ export {
 	parseTime,
 	formatTime,
 	formatThousandthMoney,
+	formatCardNo,
+	randomGenerate,
 	pickProperty,
 	escapeProperty,
 	restoreProperty,
@@ -67,6 +71,16 @@ export {
 	uniq,
 	uniqWith,
 	uniqBy,
+	/* Hook,
+	AsyncHook,
+	PromiseHook, */
+	handleImg,
+	urltoImage,
+	setStore,
+	getStore,
+	removeStore,
+	getAllStore,
+	clearStore,
 	Validator,
 	isIdNo,
 	isPhoneNo,
@@ -75,14 +89,6 @@ export {
 	isEmojiCharacter,
 	dealImage,
 	getImgData,
-	handleImg,
-	urltoImage,
-	setStore,
-	getStore,
-	removeStore,
-	getAllStore,
-	clearStore,
-	/* Hook,
-	AsyncHook,
-	PromiseHook, */
+	validatenull,
+	validateEmail,
 };
