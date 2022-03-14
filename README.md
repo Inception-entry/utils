@@ -2,6 +2,10 @@
 
 tools for front-end development
 
+- 目前本库已经收集了 53 个可用函数，持续维护补充中；
+- 这是一个开放的工具类库，针对前端的函数工具集合；
+- 希望广大使用本库的朋友提出宝贵建议，后续陆续解决这个库中存在的不足和书写遗漏等问题。
+
 ## 后台工具类函数(nodejs)
 
 ### slugify(暂未放开)
@@ -123,6 +127,7 @@ methods: {
 
 ### validation 文件夹
 
+- Validator 校验表单合法性校验类(只做研究，不建议实际应用)
 - isIdNo 验证身份证号格式是否正确
 - isPhoneNo 验证手机号码格式是否正确
 - isCarNo 验证车牌号号码格式是否正确
@@ -131,3 +136,4 @@ methods: {
 - dealImage 压缩图片(暂时保留，与 images 中的方法重合)
 - getImgData 图片转成 base64
 - validatenull 判断是否为空
+- validateEmail 判断邮箱格式是否正确
